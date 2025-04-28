@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gnoss.DevTools.ViewMaker", "Gnoss.DevTools.ViewMaker\Gnoss.DevTools.ViewMaker.csproj", "{9F677462-ECEC-4C43-BE4F-2D0FD1FCF6D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pruebaestadoservicios", "ClasesGeneradas\pruebaestadoservicios.csproj", "{A69E5F07-5684-0F6F-D5BD-C0BDD7E44F16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9F677462-ECEC-4C43-BE4F-2D0FD1FCF6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F677462-ECEC-4C43-BE4F-2D0FD1FCF6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F677462-ECEC-4C43-BE4F-2D0FD1FCF6D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69E5F07-5684-0F6F-D5BD-C0BDD7E44F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69E5F07-5684-0F6F-D5BD-C0BDD7E44F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69E5F07-5684-0F6F-D5BD-C0BDD7E44F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69E5F07-5684-0F6F-D5BD-C0BDD7E44F16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1252,7 +1252,7 @@ namespace Gnoss.DevTools.ViewMaker.Extensions
         {
             if (helper.ViewBag.ListaMetas != null)
             {
-                return (List<ViewMetaData>)helper.ViewBag.ListaMetas;
+                //return (List<ViewMetaData>)helper.ViewBag.ListaMetas;
             }
             return new List<ViewMetaData>();
         }

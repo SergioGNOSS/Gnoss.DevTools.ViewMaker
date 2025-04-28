@@ -1,0 +1,272 @@
+@using PeliculaOntology;
+@using PersonaOntology;
+@using PersonaOntology;
+@using PersonaOntology;
+@using GnossBase;
+@model ResourceViewModel
+@{
+	ResourceModel FichaDocumento = Model.Resource;
+	CommunityModel Comunidad = Html.GetComunidad();
+	UserIdentityModel IdentidadActual = Html.GetIdentidadActual();
+	Html.AddBodyClass(" MovieModel ");
+	if (FichaDocumento.ItemLinkedFotoVersion != 0 && !string.IsNullOrEmpty(FichaDocumento.ItemLinked.ToString()) && FichaDocumento.ItemLinked != Guid.Empty)
+	{
+	string urlPersonalizacion = $"{Html.GetBaseUrlContent()}/{Es.Riam.Util.UtilArchivos.ContentOntologias}/Archivos/{FichaDocumento.ItemLinked.ToString().Substring(0, 3)}";
+	Html.GetListaJS().Add($"{urlPersonalizacion}/{FichaDocumento.ItemLinked.ToString()}.js?v= {FichaDocumento.ItemLinkedFotoVersion}");
+	Html.GetListaCSS().Add($"{urlPersonalizacion}/{FichaDocumento.ItemLinked.ToString()}.css?v= {FichaDocumento.ItemLinkedFotoVersion}");
+	}
+	SemanticResourceModel semCmsModel = Model.SemanticFrom;
+	 GnossOCBase.LanguageEnum idiomaUsuario = (GnossOCBase.LanguageEnum)Enum.Parse(typeof(GnossOCBase.LanguageEnum), Html.GetUtilIdiomas().LanguageCode.ToLower());
+	Movie pMovie = new Movie(semCmsModel,idiomaUsuario);
+}
+<div class="row">
+<div class="col01 col col-12 col-lg-9">
+<div typeof="http://schema.org/Movie:movie">
+<div class="contentGroup contenidoPrincipal">
+<div class="group title">
+	<h2>@pMovie.Schema_name</h2>
+	<h3>@pMovie.Schema_description</h3>
+</div>
+</div>
+<div class="group content semanticView">
+<div class="group group_info">
+<div class="contentGroup">
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_image),idiomaUsuario)</strong>
+<span class="values">
+		<img property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_image))" src="@Html.GetBaseUrlContent()/@pMovie.Schema_image" />
+</span>
+</div>
+@if(pMovie.Schema_director!=null)
+{
+<div>
+	@foreach(Person prop in pMovie.Schema_director)
+	{
+		PintarPerson(prop,idiomaUsuario);
+	}
+</div>
+}
+@if(pMovie.Schema_actor!=null)
+{
+<div>
+	@foreach(Person prop in pMovie.Schema_actor)
+	{
+		PintarPerson(prop,idiomaUsuario);
+	}
+</div>
+}
+@if(pMovie.Schema_countryOfOrigin!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_countryOfOrigin),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_countryOfOrigin)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_countryOfOrigin))"> @prop </p>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_duration!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_duration),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(int prop in pMovie.Schema_duration)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_duration))"> @prop </p>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_productionCompany!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_productionCompany),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_productionCompany)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_productionCompany))"> @prop </p>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_rating!=null)
+{
+<div>
+	@foreach(Rating prop in pMovie.Schema_rating)
+	{
+		PintarRating(prop,idiomaUsuario);
+	}
+</div>
+}
+@if(pMovie.Schema_author!=null)
+{
+<div>
+	@foreach(Person prop in pMovie.Schema_author)
+	{
+		PintarPerson(prop,idiomaUsuario);
+	}
+</div>
+}
+@if(pMovie.Schema_genre!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_genre),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_genre)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_genre))"> @prop </p>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_inLanguage!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_inLanguage),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_inLanguage)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_inLanguage))"> @prop </p>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_url!=null)
+{
+<div>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_url)
+		{
+			<a property="p@pMovie.GetPropertyURI(nameof(pMovie.Schema_url))"  href="@prop">@pMovie.GetLabel(nameof(prop),idiomaUsuario) </a>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_recordedAt!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_recordedAt),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(int prop in pMovie.Schema_recordedAt)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_recordedAt))"> @prop </p>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_award!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_award),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_award)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_award))"> @prop </p>
+		}
+</span>
+</div>
+}
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_datePublished),idiomaUsuario)</strong>
+<span class="values">
+		<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_datePublished))"> @pMovie.Schema_datePublished </p>
+</span>
+</div>
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_contentRating),idiomaUsuario)</strong>
+<span class="values">
+		<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_contentRating))"> @pMovie.Schema_contentRating[(int)idiomaUsuario] </p>
+</span>
+</div>
+@if(pMovie.Schema_aggregateRating!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_aggregateRating),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_aggregateRating)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_aggregateRating))"> @prop </p>
+		}
+</span>
+</div>
+}
+@if(pMovie.Schema_genre!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_genre),idiomaUsuario)</strong>
+<span class="values">
+		@foreach(string prop in pMovie.Schema_genre)
+		{
+			<p property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_genre))"> @prop </p>
+		}
+</span>
+</div>
+}
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+@functions
+{
+ void PintarRating(Rating pRating,GnossOCBase.LanguageEnum idiomaUsuario, Observation pObservation){
+<div typeof="http://schema.org/Rating:rating">
+<div class="contentGroup contenidoPrincipal">
+<div class="group title">
+	<h2>@pRating.Schema_ratingSource</h2>
+	<h3>@pRating.Schema_ratingValue</h3>
+</div>
+</div>
+<div class="group content semanticView">
+<div class="group group_info">
+<div class="contentGroup">
+<div>
+		<strong>@pRating.GetLabel(nameof(pRating.Schema_ratingValue),idiomaUsuario)</strong>
+<span class="values">
+		<p property="@pRating.GetPropertyURI(nameof(pRating.Schema_ratingValue))"> @pRating.Schema_ratingValue </p>
+</span>
+</div>
+<div>
+		<strong>@pRating.GetLabel(nameof(pRating.Schema_ratingSource),idiomaUsuario)</strong>
+<span class="values">
+		<p property="@pRating.GetPropertyURI(nameof(pRating.Schema_ratingSource))"> @pRating.Schema_ratingSource[(int)idiomaUsuario] </p>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+}
+}
+@functions
+{
+void PintarPerson(Person pPerson, GnossOCBase.LanguageEnum idiomaUsuario) {
+
+if(pPerson.Schema_name!=null)
+{
+<div>
+		<strong>@pPerson.GetLabel(nameof(pPerson.Schema_name),idiomaUsuario)</strong>
+<span>
+<p property ="@pPerson.GetPropertyURI(nameof(pPerson.Schema_name))"> @pPerson.Schema_name </p>
+</span>
+</div>
+}
+if(pPerson.Schema_image!=null)
+{
+<div>
+		<strong>@pPerson.GetLabel(nameof(pPerson.Schema_image),idiomaUsuario)</strong>
+<span>
+<p property ="@pPerson.GetPropertyURI(nameof(pPerson.Schema_image))"> @pPerson.Schema_image </p>
+</span>
+</div>
+}
+}
+}
+}

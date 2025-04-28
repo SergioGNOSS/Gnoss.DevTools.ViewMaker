@@ -1,0 +1,151 @@
+@using PersonaOntology;
+@using PeliculaOntology;
+@using PeliculaOntology;
+@using PeliculaOntology;
+@using PersonaOntology;
+@using PeliculaOntology;
+@using PersonaOntology;
+@using PeliculaOntology;
+@using PersonaOntology;
+@using PeliculaOntology;
+@using PersonaOntology;
+@using GnossBase;
+@model ResourceViewModel
+@{
+	ResourceModel FichaDocumento = Model.Resource;
+	CommunityModel Comunidad = Html.GetComunidad();
+	UserIdentityModel IdentidadActual = Html.GetIdentidadActual();
+	Html.AddBodyClass(" PersonModel ");
+	if (FichaDocumento.ItemLinkedFotoVersion != 0 && !string.IsNullOrEmpty(FichaDocumento.ItemLinked.ToString()) && FichaDocumento.ItemLinked != Guid.Empty)
+	{
+	string urlPersonalizacion = $"{Html.GetBaseUrlContent()}/{Es.Riam.Util.UtilArchivos.ContentOntologias}/Archivos/{FichaDocumento.ItemLinked.ToString().Substring(0, 3)}";
+	Html.GetListaJS().Add($"{urlPersonalizacion}/{FichaDocumento.ItemLinked.ToString()}.js?v= {FichaDocumento.ItemLinkedFotoVersion}");
+	Html.GetListaCSS().Add($"{urlPersonalizacion}/{FichaDocumento.ItemLinked.ToString()}.css?v= {FichaDocumento.ItemLinkedFotoVersion}");
+	}
+	SemanticResourceModel semCmsModel = Model.SemanticFrom;
+	 GnossOCBase.LanguageEnum idiomaUsuario = (GnossOCBase.LanguageEnum)Enum.Parse(typeof(GnossOCBase.LanguageEnum), Html.GetUtilIdiomas().LanguageCode.ToLower());
+	Person pPerson = new Person(semCmsModel,idiomaUsuario);
+}
+<div class="row">
+<div class="col01 col col-12 col-lg-9">
+<div typeof="http://schema.org/Person:person">
+<div class="contentGroup contenidoPrincipal">
+<div class="group title">
+	<h2>@pPerson.Schema_name</h2>
+</div>
+</div>
+<div class="group content semanticView">
+<div class="group group_info">
+<div class="contentGroup">
+@if(pPerson.Schema_iDirector!=null)
+{
+<div>
+	@foreach(Movie prop in pPerson.Schema_iDirector)
+	{
+		PintarMovie(prop,idiomaUsuario);
+	}
+</div>
+}
+</div>
+<div class="contentGroup">
+@if(pPerson.Schema_iActors!=null)
+{
+<div>
+	@foreach(Movie prop in pPerson.Schema_iActors)
+	{
+		PintarMovie(prop,idiomaUsuario);
+	}
+</div>
+}
+</div>
+<div class="contentGroup">
+@if(pPerson.Schema_actoresComunActor!=null)
+{
+<div>
+	@foreach(Person prop in pPerson.Schema_actoresComunActor)
+	{
+		PintarPerson(prop,idiomaUsuario);
+	}
+</div>
+}
+</div>
+<div class="contentGroup">
+@if(pPerson.Schema_directoresComunActor!=null)
+{
+<div>
+	@foreach(Person prop in pPerson.Schema_directoresComunActor)
+	{
+		PintarPerson(prop,idiomaUsuario);
+	}
+</div>
+}
+</div>
+<div class="contentGroup">
+@if(pPerson.Schema_actoresComunDirector!=null)
+{
+<div>
+	@foreach(Person prop in pPerson.Schema_actoresComunDirector)
+	{
+		PintarPerson(prop,idiomaUsuario);
+	}
+</div>
+}
+</div>
+<div class="contentGroup">
+@if(pPerson.Schema_directoresComunDirector!=null)
+{
+<div>
+	@foreach(Person prop in pPerson.Schema_directoresComunDirector)
+	{
+		PintarPerson(prop,idiomaUsuario);
+	}
+</div>
+}
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+@functions
+{
+}
+@functions
+{
+void PintarMovie(Movie pMovie, GnossOCBase.LanguageEnum idiomaUsuario) {
+
+if(pMovie.Schema_name!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_name),idiomaUsuario)</strong>
+<span>
+<p property ="@pMovie.GetPropertyURI(nameof(pMovie.Schema_name))"> @pMovie.Schema_name </p>
+</span>
+</div>
+}
+if(pMovie.Schema_image!=null)
+{
+<div>
+		<strong>@pMovie.GetLabel(nameof(pMovie.Schema_image),idiomaUsuario)</strong>
+<span>
+<img property="@pMovie.GetPropertyURI(nameof(pMovie.Schema_image))" src="@Html.GetBaseUrlContent()/@pMovie.Schema_image"/>
+</span>
+</div>
+}
+}
+void PintarPerson(Person pPerson, GnossOCBase.LanguageEnum idiomaUsuario) {
+
+if(pPerson.Schema_name!=null)
+{
+<div>
+		<strong>@pPerson.GetLabel(nameof(pPerson.Schema_name),idiomaUsuario)</strong>
+<span>
+<p property ="@pPerson.GetPropertyURI(nameof(pPerson.Schema_name))"> @pPerson.Schema_name </p>
+</span>
+</div>
+}
+}
+}
+}

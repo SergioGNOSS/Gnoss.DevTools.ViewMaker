@@ -30,6 +30,52 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ActividadReciente\_ActividadReciente.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ActividadReciente\_ActividadReciente_Anterior.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\BuscadorSPARQL\_BuscadorSPARQL.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Buscador\Index.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Buscador\_Buscador.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\CajaBuscador\_CajaBuscador.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ConsultaSPARQL\_ConsultaSPARQL.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ConsultaSQLSERVER\_ConsultaSQLSERVER.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\DatosComunidad\_DatosComunidad.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Destacado\_Destacado.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\EnvioCorreo\_EnvioCorreo.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_Faceta.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarCajaBusqueda.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarCajaBusquedaSimple.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarFaceta.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarItemFaceta.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\FichaDescripcionDocumento\_FichaDescripcionDocumento.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_Paginacion.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_PestanyasHorizontales.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_PestanyasPersonalizadas.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_PestanyasVerticales.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\HTML\_HTML.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Index.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoProyectos\_ListadoProyectos.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_BreveConFoto.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_BreveConFotoAUnParrafo.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_Completa.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_DescripcionCompleta.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_Destacado.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_ListadoSinFoto.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_SoloIconoYTitulo.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_UltimosRecursos.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoDestacados.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoRecursosNormal.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoRecursosPaginacion.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoRecursosPestanyas.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoUsuarios\_ListadoUsuarios.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\MasVistos\_MasVistos.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Menu\_Menu.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Menu\_PintarOpciones.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ResumenPerfil\_ResumenPerfil.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Tesauro\_Tesauro.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\UsuariosRecomendados\_UsuariosRecomendados.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\_BloqueCMS.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\_ComponenteCMS.cshtml" />
+    <Content Remove="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\_ResultadoRecurso.cshtml" />
     <Content Remove="wwwroot\css\GnossTestView.css" />
     <Content Remove="wwwroot\js\bootstrap-checkbox.js" />
     <Content Remove="wwwroot\js\GnossTestView.js" />
@@ -37,6 +83,8 @@
 
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ecosistema\Vistas\" />
+    <Folder Include="Views\pruebaestadoservicios\Vistas\CMS\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -461,6 +509,52 @@
     <None Include="GenericViews\Widget\Comunidad.cshtml" />
     <None Include="GenericViews\_ViewImports.cshtml" />
     <None Include="GenericViews\_ViewStart.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ActividadReciente\_ActividadReciente.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ActividadReciente\_ActividadReciente_Anterior.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\BuscadorSPARQL\_BuscadorSPARQL.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Buscador\Index.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Buscador\_Buscador.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\CajaBuscador\_CajaBuscador.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ConsultaSPARQL\_ConsultaSPARQL.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ConsultaSQLSERVER\_ConsultaSQLSERVER.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\DatosComunidad\_DatosComunidad.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Destacado\_Destacado.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\EnvioCorreo\_EnvioCorreo.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_Faceta.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarCajaBusqueda.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarCajaBusquedaSimple.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarFaceta.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Faceta\_PintarItemFaceta.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\FichaDescripcionDocumento\_FichaDescripcionDocumento.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_Paginacion.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_PestanyasHorizontales.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_PestanyasPersonalizadas.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\GrupoComponentes\_PestanyasVerticales.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\HTML\_HTML.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Index.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoProyectos\_ListadoProyectos.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_BreveConFoto.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_BreveConFotoAUnParrafo.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_Completa.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_DescripcionCompleta.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_Destacado.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_ListadoSinFoto.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_SoloIconoYTitulo.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\Vistas\_UltimosRecursos.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoDestacados.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoRecursosNormal.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoRecursosPaginacion.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoRecursos\_ListadoRecursosPestanyas.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ListadoUsuarios\_ListadoUsuarios.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\MasVistos\_MasVistos.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Menu\_Menu.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Menu\_PintarOpciones.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\ResumenPerfil\_ResumenPerfil.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\Tesauro\_Tesauro.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\UsuariosRecomendados\_UsuariosRecomendados.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\_BloqueCMS.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\_ComponenteCMS.cshtml" />
+    <None Include="Views\pruebaestadoservicios\Vistas\Views\CMSPagina\_ResultadoRecurso.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <None Include="wwwroot\js\bootstrap-checkbox.js" />
   </ItemGroup>
@@ -472,6 +566,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClasesGeneradas\pruebaestadoservicios.csproj" />
   </ItemGroup>
 
 
@@ -525,5 +623,8 @@
       <HintPath>Areas\Gnoss.DevTools.ViewMaker\Libraries\Gnoss.Web.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+
+
 
 </Project>
